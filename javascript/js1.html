@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript-1</title>
+    <style>
+        button {
+            cursor: pointer;
+            background-color:black;
+            color:white;
+            border-radius: 20px;
+        }
+
+        button:hover {
+            background-color: aquamarine;
+            color: black;
+        }
+
+    </style>
+
+
+</head>
+  <script>
+    function mensajeAlerta(){
+        alert("atencion alumnos:no deben llegar tarde!!!")
+        const caja_mensaje = document.getElementById("mensaje");
+        caja_mensaje.textContent = "Entendido profesor!!!";
+    }
+  </script>
+<body>
+      <p id="mensaje"></p>
+      <button onclick="mensajeAlerta()">Alerta</button>
+</body>
+</html>

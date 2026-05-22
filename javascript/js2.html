@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventlistener</title>
+    <style>
+        button {
+            cursor: pointer;
+            background-color:black;
+            color:white;
+            border-radius: 20px;
+        }
+
+        button:hover {
+            background-color: aquamarine;
+            color: black;
+        }
+        .titulo{
+            text-align: center;
+            color: red;
+            font-weight: bold;
+            font-size: 30px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="titulo1">Escuela EETP N° 614</div>
+
+    <h1 id="mensaje"></h1>
+    <button id="btn_mensaje">Alerta</button>
+    <button id="btn_limpiar">limpiar</button>
+    <button id="btn_formato">Dar formato al título</button>
+    <button id="btn_quitar_formato">Quitar formato</button>
+
+
+    <script>
+        /* capturas realizadas */
+        const caja_mensaje = document.getElementById("mensaje");
+        const botonAlerta= document.getElementById("btn_mensaje");
+        const botonLimpiar = document.getElementById("btn_limpiar");
+        const botonFormato = document.getElementById("btn_formato");
+        const titulo1 = document.getElementById("titulo1");
+        const botonQuitarFormato = document.getElementById("btn_quitar_formato");
+        /* escuchas realizadas */
+        botonAlerta.addEventListener("click", function(){
+            /* alert("Es importante no llegar tarde!!!"); */
+            caja_mensaje.textContent = "Entendido";
+    
+        })
+        botonLimpiar.addEventListener("click", function(){
+            caja_mensaje.textContent = "";
+        })
+        botonFormato.addEventListener("click", function(){
+            titulo1.classList.add("titulo");
+        })
+        botonQuitarFormato.addEventListener("click", function(){
+            titulo1.classList.remove("titulo");
+        })
+
+
+    </script>
+        
+</body>
+</html>
